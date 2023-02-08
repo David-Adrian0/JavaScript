@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 3</title>
+</head>
+<body>
+    <h1>Antecessor e Sucessor</h1>
+    <input type="button" value="Teste-me se for capaz" onclick="teste()">
+</body>
+<script>
+    function teste(){
+        var numero = Number.parseInt(window.prompt('Digite um número real qualquer'));
+        var ant = (numero - 1)
+        var suc = (numero + 1)
+        window.alert('O antecessor do número ' + numero + ' é ' + ant + ' e o sucessor do número ' + numero + ' é ' + suc)
+    }
+</script>
+</html>

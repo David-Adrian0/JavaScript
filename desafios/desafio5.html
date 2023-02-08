@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 5</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="botao.css">
+</head>
+<body>
+    <main>
+        <h1>Conversor de medidas</h1>
+        <br>
+        <input id="botão1" type="button" value="converter" onclick="converter()">
+        <div class="medidas"> 
+            <h2 id="titulo1"></h2>
+
+            <p id="decimetro"></p>
+            <p id="centimetro"></p>
+            <p id="milimetro"></p>
+            <p id="decametro"></p>
+            <p id="hectometro"></p>
+            <p id="quilometro"></p>
+
+            <p id="botão"></p>
+        </div>
+
+    </main>
+    <footer>
+        CRIADO POR DAVID ÁDRIAN
+    </footer>
+</body>
+<script>
+    function converter() {
+        document.getElementById('titulo1').innerHTML='Convertendo o valor...';
+
+        var valor = Number.parseFloat(window.prompt('Digite um valor em METROS!'));
+
+        valordeci = Number.parseFloat(valor/ 10);
+        valorcenti = Number.parseFloat(valor / 100);
+        valormili = Number.parseFloat(valor / 1000);
+
+        var valordec = Number.parseFloat(valor * 10);
+        var valorhec = Number.parseFloat(valor * 100);
+        var valorqui = Number.parseFloat(valor * 1000);
+
+        document.getElementById('decimetro').innerHTML=valordeci + ' decímetros';
+        document.getElementById('centimetro').innerHTML=valorcenti + ' centímetros';
+        document.getElementById('milimetro').innerHTML=valormili + ' milímetros';
+
+        document.getElementById('decametro').innerHTML=valordec + ' decâmetro';
+        document.getElementById('hectometro').innerHTML=valorhec + ' hectômetro';
+        document.getElementById('quilometro').innerHTML=valorqui + ' quilometro';
+
+        document.getElementById('botão').innerHTML='<input type="button" value="limpar" style="background-color: #7D2E68;border: transparent;border-radius: 0.5em;color: white;font-size: 1em;padding: 0.5em;" onclick="limpar()">'
+    };
+
+    function limpar(){
+        document.getElementById('titulo1').innerHTML=' '
+
+        document.getElementById('decimetro').innerHTML=' '
+        document.getElementById('centimetro').innerHTML=' '
+        document.getElementById('milimetro').innerHTML=' '
+
+        document.getElementById('decametro').innerHTML=' '
+        document.getElementById('hectometro').innerHTML=' '
+        document.getElementById('quilometro').innerHTML=' '
+
+        document.getElementById('botão').innerHTML='Limpo!'
+    }
+</script>
+</html>

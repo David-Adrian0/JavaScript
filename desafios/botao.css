@@ -1,0 +1,28 @@
+#botão1{
+	background-color: #7D2E68;
+	border: transparent;
+	border-radius: 0.5em;
+	color: white;
+	font-size: 1em;
+	padding: 0.5em;
+}
+#botão1:hover{
+	background-color: #80416f;
+	transition: 1s;
+}
+.botã{
+    background: #B9DFFF;
+	color: #fff;
+	border: 1px solid #eee;
+	border-radius: 20px;
+	box-shadow: 5px 5px 5px #eee;
+	text-shadow: none;
+}
+.botã:hover{
+    background: #016ABC;
+	color: #fff;
+	border: 1px solid #eee;
+	border-radius: 20px;
+	box-shadow: 5px 5px 5px #eee;
+	text-shadow: none;
+}

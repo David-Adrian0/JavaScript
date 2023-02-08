@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 6</title>
+</head>
+<body>
+    <h1>Desconto de 10%</h1>
+    <input type="button" value="Desconto" onclick="desconto()">
+    <p id="descrição"></p>
+</body>
+<script>
+    function desconto(){
+        window.alert('Bem-vindo a ÁdrianTech')
+        var produto = window.prompt('Qual produto você gostaria de ter?')
+        var valor = Number.parseFloat(window.prompt('Qual é o valor do produto?'))
+        var desconto = Number.parseFloat(window.prompt('De 10% à 30% de desconto, qual você escolhe?'))
+
+        window.alert('O desconto será aplicado!')
+
+        var valori = (valor * desconto / 100)
+        var valorf = valor - valori
+
+        document.getElementById('descrição').innerHTML='O valor original do produto era ' + valor + '. Foi aplicado um desconto de ' + desconto + '%, equivalente a R$' + valori.toFixed(2) + '. No final o preço do produto é de R$' + valorf; 
+    };
+</script>
+</html>

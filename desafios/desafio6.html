@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 6</title>
+</head>
+<body>
+    <h1>Converta as temperaturas</h1>
+    
+    <input type="button" value="CONVERTER" onclick="converter()">
+    <h2 id="titulo"></h2>
+    <p id="descrição"></p>
+</body>
+<script>
+    function converter(){
+        window.alert('Bem-vindo ao conversor')
+        var tempc = Number.parseFloat(window.prompt('Digite a temperatura'))
+        window.alert('A temperatura é de ' + tempc + '°C')
+
+        document.getElementById('titulo').innerHTML='A temperatura de ' + tempc + '°C está sendo convertida...'
+
+        var tempk = tempc - 237
+        var tempf = (tempc * 1.8) + 32
+
+        document.getElementById('descrição').innerHTML='A temperatura em °K ' + tempk + ' e a temperatura em F° é de' + tempf
+    }
+</script>
+</html>

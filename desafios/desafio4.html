@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 4</title>
+</head>
+<body>
+    <h1>Conferindo o troco</h1>
+    <input type="button" value="Calcular" onclick="calcular()">
+</body>
+<script>
+    function calcular() {
+        window.alert('Bem-vindo ao Supermercados Ultrax');
+        var produto = window.prompt('Qual produto foi comprado?');
+        var valor = Number.parseFloat(window.prompt('Qual é o valor do(a) ' + produto + '?'));
+        var pagamento = Number.parseFloat(window.prompt('Quanto será o valor do pagamento?'));
+
+        //calculando
+        
+        var valorf = Number.parseFloat(pagamento-valor)
+        window.alert(valorf)
+
+        //alerta final
+
+        window.alert('A compra do produto foi aprovada! Foi realizada uma compra de um (uma), ' + produto + ', pelo valor de R$' + valor + '. O troco deve ser de R$' + valorf.toFixed(2) + '. Muito obrigado pela preferência, volte sempre!')
+    };
+</script>
+</html>
